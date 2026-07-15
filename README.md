@@ -4,7 +4,7 @@ An event website for a College of Engineering is an essential resource designed 
 
 A drafted project; where students of College of Engineering in Universidad de Manila can freely express everything in their own space and a computing where they can be understood.
 
-FEATURES
+## FEATURES
 
 • College Department Annoucements
 
