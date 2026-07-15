@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    
+     <!---CSS--->
+     <title>CETVent Previous Event</title>
+     <style>
+
+         html {
+           scroll-behavior: smooth;
+         }
+
+         body {
+             height: 1000px;
+             width: auto;
+             margin: 50px;
+             overflow-y: scroll; overflow-x: hidden;
+         }
+
+         #container {
+             position:fixed;
+             margin-right: 20px;
+             margin-left: 1150px;
+             width: auto;
+             }
+
+            /* The navbar */
+            .topnav {
+                font-family: Arial, Helvetica, sans-serif;
+                margin-left: -800px;
+                margin-top: -100px;
+                align-items: center;
+                justify-content: space-around;
+                display: flex;
+                width: 1000px;
+                height: 50px;
+                background-color: rgb(35, 34, 34, 1);
+                border-radius: 0 0 20px 20px;
+                position: sticky; /* Keep this */
+                top: 0; /* Add this to specify the position from the top */
+                z-index: 2;
+            }
+
+          /* Navbar links */
+            .topnav a {
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 20px;
+                border-bottom: 3px solid transparent;
+            }
+
+            .topnav a:hover {
+                border-bottom: 3px solid white;
+            }
+
+            .topnav a.active {
+                border-bottom: 3px solid white;
+            }
+
+
+         /* Event Btn Drop Down */
+
+         .dropbtn {
+                font-size: 8px;
+                cursor: pointer;
+                text-align: center;
+                }
+
+            .dropdown {
+                position: relative;
+                display: inline-block;
+                text-align: center;
+                color: #fe0000;
+                }
+
+            .dropdown-content {
+                width: 200px;
+                height: 150px;
+                margin-right: 280px;
+                margin-top: 210px;
+                display: none;
+                position:absolute;
+                min-width: 160px;
+                overflow: auto;
+                box-shadow: 50px rgba(250, 250, 250, 1);
+                background-color: #ffffff;
+                border-radius: 5px;
+                opacity: 0.8;
+                
+                }
+
+            .dropdown-content a {
+                color: rgb(0, 0, 0);
+                margin: 10px 0 10px -10px;
+                text-align: center;
+                padding: 5px 0px 5px 10px;
+                display: block;
+                text-decoration: none;
+                opacity: 1;
+                }
+
+            .dropdown-content a:hover { 
+              color: rgba(249, 127, 28, 1);
+            }
+            .show {
+              display: block;
+              color: #000000;
+            }
+
+
+    /* TITLE */
+         .title-container {
+            width: 600px;
+            margin: 50px;
+            
+         #college {
+             font-size: 30px;
+             color: #f0efed;
+             font-weight: bold;
+             margin: 10px 0 0; /* Space above */
+             margin-top: -10px;
+             margin-left: 10px;
+             font-family: Arial, Helvetica, sans-serif;
+             }
+
+         #cets-container {
+             margin-top: 220px;
+             }
+
+         #cet, #vent {
+             font-size: 120px;
+             letter-spacing: 5px; 
+             font-weight: bold;
+             display: inline-block; 
+             font-family: Arial, Helvetica, sans-serif;
+             }
+
+         #cet {
+             color: rgba(249, 127, 28, 1);
+             
+             }
+
+         #vent {
+             color: #f0efed;
+             margin-left: -5px;
+             }
+            }
+
+    /*IMAGE BACKGROUND */
+  
+        .bg {
+            width: 1300px;
+            height: 2000px;
+             display: flex; 
+             margin-top: 60px;
+             margin-left: 20px;
+         
+    /* IMAGE */
+          #imgbg {
+            width: 1600px;
+             max-width: 2000px;
+             height: 600px;
+             margin: 10px 200px 0 0;
+             background-image: url(Upcoming_Event-Photo.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;   
+         }
+        }
+
+    /*EVENT CONTAINER */
+
+
+        .event-container {
+          width: 170vh;
+          height: 180vh;
+          background-color:rgb(35, 34, 34, 1);
+          margin: 50px;
+          margin-top: 148px;
+          margin-left: 30px;
+          padding: 50px 30px 0px 50px;
+          display:flex;
+          flex-wrap: wrap;
+          opacity: 1;
+          box-shadow: 0 4px 8px 0 rgba(35, 34, 34), 0 6px 20px 0 rgba(35, 34, 34);
+
+        }
+
+        .event-title {
+            width: 800px;
+            height: 70px;
+            margin: -10px 0 -500px 320px;
+              font-size: 60px;
+              color: #ffffff;
+              font-family: "Didact Gothic", sans-serif;
+              font-weight: bold;
+              text-align: center;
+            
+          }
+
+        .flip-container {
+            position: relative;
+            width: 500px;
+            height: 200px;
+            transform-style: preserve-3d;
+            transition:  all 0.5s ease-in-out;
+            margin-left: 50px;
+            margin-top: 50px;
+            }
+
+            .flip-container:hover {
+              transform: rotateY(180deg);
+            }
+
+            .front-map {
+              z-index: 2;
+            }
+
+            .back-map {
+              transform: rotateY(180deg);
+              width: 100%;
+            }
+
+            .u-event-title{
+              height: 35px;
+              width: 200px;
+              font-family: "Didact Gothic", sans-serif, bold;
+              font-size: bolder;
+              background-color: #f0efed;
+              margin-top: -220px;
+              margin-left: 500px;
+                font-size: 30px;
+                color: white;
+            }
+
+            .u-event-date{
+              width: 200px;
+              height: 50px;
+              font-family: "Didact Gothic", sans-serif, bold;
+              font-size: bolder;
+              background-color: #f0efed;
+
+            }
+
+            .u-event-info{
+              width: 800px;
+              height: 100px;
+              font-family: "Didact Gothic", sans-serif, bold;
+              font-size: bold;
+              background-color: #f0efed;
+              margin-left: 500px;
+              margin-top: 50px;
+                font-size: 15px;
+                color: white;
+            }
+
+            .register-container{
+                width: 80px;
+                height: 10px;
+                border-radius: 8px;
+                background-color: rgb(255, 255, 255);
+                margin: -23px 0 0 1165px;
+                padding: 3px 12px 12px 12px;
+              }
+
+              .register-container:hover{
+                background-color: rgba(249, 127, 28, 1);
+              }
+
+
+              #register{
+                width: 100px;
+                font-size: 15px;
+                text-align: center;
+                text-decoration: none;
+                font-family: "Didact Gothic", sans-serif;
+                color: rgb(0, 0, 0);
+                font-weight: bold;
+              }
+
+              .fa {
+                margin: 80px 0 0 1280px;
+                color:white;
+              }
+
+              .fa:hover{
+                color: #ff0000;
+                cursor: pointer;
+              }
+
+        .line{
+          height: 2px;
+          width: 1500px;
+          background-color: #fe0000;
+          margin-top: -300px;
+          margin-left: -15px;
+        }
+
+        .u-event-container{
+          width: 1500px;
+          height: 300px;
+          background-color: #b3b3b3;
+          margin-left: -15px;
+          margin-top: -250px;
+          
+        }
+
+        .front-map {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              backface-visibility: hidden;
+              display: flex;
+              align-items: center;
+            }
+
+            .back-map {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              backface-visibility: hidden;
+              display: flex;
+              align-items: center;
+            }
+
+        .u-event2-container{
+          width: 1500px;
+          height: 300px;
+          background-color: #b3b3b3;
+          margin-left: -15px;
+          margin-top: -600px;
+          
+        }
+
+          .front-map2 {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              backface-visibility: hidden;
+              display: flex;
+              align-items: center;
+            }
+
+          .back-map2 {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              backface-visibility: hidden;
+              display: flex;
+              align-items: center;
+            }
+
+            
+
+          
+
+        
+/* FOOTEEEERRRR */
+        
+        .footer {
+            width: 1800px;
+            height: 500px;
+            background-color: rgb(22, 22, 21);
+            margin-top: 300px;
+            margin-left: -50px;
+          
+        }
+
+         .contact {
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+            padding-left: 80px;
+            padding-top: 80px;
+         }
+
+         .questions-container {
+            width: 250px;
+            height: 40px;
+            margin-left: 90px;
+            margin-top: -5px;
+            margin-bottom: -200px;
+            rotate: -3deg;
+            background-color: rgba(249, 127, 28, 1);
+                font-size: 40px;
+                font-weight: bold;
+                color: rgb(22, 22, 21);
+                padding-left: 5px;
+                font-family: 'Courier New', Courier, monospace;
+         }
+
+         .details-container {
+            width: 500px;
+            height: 300px;      
+            margin-top: 150px;      
+
+         }
+
+         #detail1 {
+            font-size: 18px;
+            font-family: "Didact Gothic", sans-serif;
+            color: white;
+            padding-left: 100px;
+            padding-top: 100px;
+         }
+
+         #detail2 {
+            font-size: 18px;
+            font-family: "Didact Gothic", sans-serif;
+            color: white;
+            padding-left: 100px;
+         }
+
+         #detail3 {
+            font-size: 18px;
+            font-family: "Didact Gothic", sans-serif;
+            color: white;
+            padding-left: 100px;
+            padding-top: 30px;
+         }
+
+         #detail4 {
+            font-size: 18px;
+            font-family: "Didact Gothic", sans-serif;
+            color: white;
+            padding-left: 100px;
+         }
+
+         /* EXPERIMENT? */
+
+         .ag-format-container {
+          width: 1250px;
+          margin-left: 1400px;
+          margin-top: -360px;
+        }
+
+        .ag-courses_item {
+          -ms-flex-preferred-size: calc(33.33333% - 30px);
+          flex-basis: calc(33.33333% - 30px);
+          margin: 0 10px 15px;
+          overflow: hidden;
+        }
+
+        .ag-courses-item_link {
+          display: block;
+          overflow: hidden;
+          position: relative;
+          width: 250px;
+          height: 70px;
+          padding-left: 20px;
+          text-decoration: none;
+          border-radius: 10px;
+        }
+
+        .ag-courses-item_link:hover .ag-courses-item_bg {
+          -webkit-transform: scale(10);
+          -ms-transform: scale(10);
+          transform: scale(10);
+        }
+        .ag-courses-item_title {
+          min-height: 87px;
+          margin: 0 0 25px;
+          overflow: hidden;
+          font-weight: bold;
+            font-size: 16px;
+            color: white;
+            z-index: 2;
+            position: relative;
+            text-decoration: none;
+            padding-left: 0px;
+            padding-top: 10px;
+            text-align: left;
+            font-family: "Didact Gothic", sans-serif;
+        }
+
+        .ag-courses-item_body {
+          min-height: 87px;
+          margin-left: 500px;
+          overflow: hidden;
+          font-weight: bold;
+            font-size: 16px;
+            font-family: "Didact Gothic", sans-serif;
+
+        }
+
+        .ag-courses-item_bg {
+          height: 128px;
+          width: 128px;
+          background-color: rgba(249, 127, 28, 1);
+          z-index: 1;
+          position: absolute;
+          right: -75px;
+          border-radius: 30%;
+          -webkit-transition: all .9s ease;
+          -o-transition: all .9s ease;
+          transition: all .9s ease;
+        }
+    
+        @media only screen and (max-width: 979px) {
+          .ag-courses_item {
+            -ms-flex-preferred-size: calc(50% - 30px);
+            flex-basis: calc(50% - 30px);
+          }
+          .ag-courses-item_title {
+            font-size: 24px;
+          }
+        }
+
+        .ag-courses-item_date-box {
+          font-size: 11px;
+          color: #FFF;
+          z-index: 2;
+          position: relative;
+          margin-top: -80px;
+          font-family: "Didact Gothic", sans-serif;
+        }
+        .ag-courses-item_date {
+          font-weight: bold;
+          color: #f9b234;
+          -webkit-transition: color .5s ease;
+          -o-transition: color .5s ease;
+          transition: color .5s ease
+        }
+
+        @media only screen and (max-width: 767px) {
+          .ag-format-container {
+            width: 96%;
+          }
+
+        }
+        @media only screen and (max-width: 639px) {
+          .ag-courses_item {
+            -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+          }
+          .ag-courses-item_title {
+            min-height: 72px;
+            line-height: 1;
+
+            font-size: 24px;
+          }
+          .ag-courses-item_link {
+            padding: 22px 40px;
+          }
+          .ag-courses-item_date-box {
+            font-size: 16px;
+          }
+        }
+
+
+
+
+/*  LOG IN AND SIGN UP CONTAINER */
+
+      .in-container {
+        width: 700px;
+        height: 200px;
+        background-color: white;
+        border-radius: 30px;
+          margin-left: 500px;
+          margin-top: -450px;
+          padding: 50px 20px 200px 50px;
+
+      }
+
+
+      /*SIGN UP CONTAINER */
+
+      .form2 {
+        position: relative;
+        z-index: 1;
+        max-width: 700px;
+        height: 360px;
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 30px;
+          margin-top: -35px;
+          margin-left: -35px;
+          margin-right: -5px;
+          border-radius: 15px;
+          text-align: center;
+          box-shadow: 0 0 20px 0 
+            rgba(0, 0, 0, 0.2), 
+            0 5px 5px 0 rgba(0, 0, 0, 0.2);
+            background-color: white;
+        }
+
+      .signup-title {
+        font-size: 25px;
+        color: #000000;
+          padding-bottom: 20px;
+          margin-top: 5px;
+          font-family: "Didact Gothic", sans-serif;
+          font-weight: bolder;
+      }
+
+     .form2 input {
+      font-family: "Didact Gothic", sans-serif;
+      outline: 5;
+      border-radius: 10px;
+      background-color: rgb(228, 226, 226);
+      width: 100%;
+      height: 50px;
+      border: 0;
+      margin: 5px 0 5px;
+      padding-left: 30px;
+      box-sizing: border-box;
+      font-size: 15px;
+      font-weight: bold;
+     }
+
+     .form2 button {
+      font-family:"Didact Gothic", sans-serif;
+      outline: 0;
+      background: #202b25;
+      width: 100px;
+      height: 25px;
+      border-radius: 10px;
+      border: 0;
+      padding-left: 5px;
+      color: white;
+      font-weight: bold;
+      font-size: 15px;
+      -webkit-transition: all 0.3 ease;
+      transition: all 0.3 ease;
+      cursor: pointer;
+      margin-bottom: 20px;
+      margin-top: 30px;
+     }
+
+     .form2 button:hover, 
+     .form2 button:active,
+     .form2 button:focus {
+      background: rgba(249, 127, 28, 1);
+      font-size: 15px;
+      color: #ffffff;
+      font-weight: bold;
+     }
+
+     .form2 .form2-messages {
+      margin: 5px 0 0;
+      color: #b3b3b3;
+      font-size: 12px;
+     }
+
+     .form2 .form2-message a {
+      margin: 15px 0 0;
+      text-decoration: none;
+     }
+
+     .signup-body {
+      background: linear-gradient(360deg rgba(35, 60, 20, 0.356) 0%, rgba(7, 18, 102) 50%);
+      font-family: "Didact Gothic", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin-top: 100px;
+     }
+
+             /* Customize scrollbar/*
+            
+                /* width */
+                ::-webkit-scrollbar {
+                    width: 8px;
+                    }
+    
+                    /* Track */
+                    ::-webkit-scrollbar-track {
+                    background: white;
+                    }
+                    
+                    /* Handle */
+                    ::-webkit-scrollbar-thumb {
+                    background: rgba(249, 127, 28, 1);
+                    }
+    
+                    /* Handle on hover */
+                    ::-webkit-scrollbar-thumb:hover {
+                    background: white;
+                    }
+    
+                    
+</style>
+</head>
+
+<!--HTML-->
+
+<body onload="startTime()">
+    <div>
+    <div id="home">
+        
+
+            <script>
+              /* When the user clicks on the button, 
+              toggle between hiding and showing the dropdown content */
+              function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+              }
+              
+              // Close the dropdown if the user clicks outside of it
+              window.onclick = function(event) {
+                if (!event.target.matches('.dropbtn')) {
+                  var dropdowns = document.getElementsByClassName("dropdown-content");
+                  var i;
+                  for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                      openDropdown.classList.remove('show');
+                    }
+                  }
+                }
+              }
+              </script>
+
+
+              <!--Navigation-->
+            <nav>
+                <div id="container">
+                  <div class="topnav">
+                    <a href="Home Page.html #bahay">HOME</a>
+                    <a onclick="myFunction()" class="dropbtn">EVENT </a>
+                      <div id="myDropdown" class="dropdown-content"> 
+                          <a href="Upcoming-Event Page.html">Upcoming Event</a>
+                          <a href="Previous-Event Page.html">Previous Event</a>
+                          <a href="Past-Event Page.html">Past Event</a>
+                      </div>
+                    <a href="Home Page.html #about">ABOUT</a>
+                    <a href="Home Page.html #footer">CONTACT</a>
+                  </div>
+              </div>
+              </nav>  
+
+        <div class="bg">
+          <div id="imgbg">
+
+            
+            <div class="title-container">
+                <div id="cets-container">
+                    <span id="cet">CET</span>
+                    <span id="vent">Vent</span>
+                    <p id="college">COLLEGE OF ENGINEERING</p>
+                </div>
+              </div>
+
+              
+              <div class="event-container">
+                
+                <div class="event-title"> PREVIOUS EVENTS</div>
+
+                <div class="u-event-container">
+                <div class="flip-container">
+                <div class="back-map">
+                    <img src="FlipPhoto.jpg" 
+                    width="400" 
+                    height="250" 
+                    style="border:0;" >
+                  </div>
+
+                  <div class="front-map">
+                    <img src="FlipPhoto.jpg" 
+                    width="400" 
+                    height="250" 
+                    style="border:0;" >
+                </div>
+                </div>
+
+               
+                <div class="u-event-title"> TITLE</div>
+                <div class="u-event-date"> Date </div>
+                <div class="u-event-info"> The event was a reminder that technology’s rapid pace means there's always something new around the corner. 
+                  As we look to the future, it's clear that the most successful organizations will be those who embrace change, push boundaries, and put
+                   innovation at the heart of their strategy.</div>
+                
+                <div class="fa fa-heart" style="font-size:20px"></div>
+                <div class="register-container">
+                  <a href="https://udmwebsite.udm.edu.ph/college-of-engineering-and-technology/" target="_blank" id="register"> REGISTER</a>
+                </div>
+
+                
+
+              </div>
+
+              <div class="line"></div>
+
+
+              <div class="u-event2-container">
+                <div class="flip-container">
+                  <div class="back-map2">
+                      <img src="photobox3.jpg" 
+                      width="400" 
+                      height="250" 
+                      style="border:0;" >
+                    </div>
+
+                    <div class="front-map2">
+                      <img src="photobox.jpg" 
+                      width="400" 
+                      height="250" 
+                      style="border:0;" >
+                  </div>
+                </div>
+              </div>
+
+              </div>
+              </div>
+      
+        </div>
+
+            
+        </div> 
+
+
+
+
+                         <!--FOOTER-->
+
+                         <div class="footer">
+                            <div class="contact"> CONTACT</div>
+                            <div class="questions-container"> QUESTIONS? </div>
+                            <div class="details-container"> 
+                                <div id="detail1"> Call Kharyll at 1234-567-8999 or send us an</div>
+                                <div id="detail2"> Email to: iloveyou123@gmail.com</div>
+                                <div id="detail3"> Address: 788 O. Santiago St. </div>
+                                <div id="detail4"> Sampaloc Manila, Philippines 1008</div>   
+                            </div>
+    
+                                  <div class="ag-format-container">
+                                    <div class="ag-courses_box">
+                                      <div class="ag-courses_item">
+                                        <a href="Home Page.html #contact" class="ag-courses-item_link">
+                                          <div class="ag-courses-item_bg"></div>
+                                          <div class="ag-courses-item_title">
+                                            Get In Touch
+                                          </div>
+    
+                                          <div class="ag-courses-item_date-box">
+                                            CETVent Contact Page
+                                          </div>
+                                        </a>
+                                      </div>     
+    
+                                      <div class="ag-courses_item">
+                                        <a href="https://www.facebook.com/UDMStolenShots" class="ag-courses-item_link">
+                                          <div class="ag-courses-item_bg"></div>
+                                  
+                                          <div class="ag-courses-item_title">
+                                            Credentials
+                                          </div>
+    
+                                          <div class="ag-courses-item_date-box">
+                                            Facebook:
+                                            <span class="ag-courses-item_date">
+                                              UDM Stolen Shots 
+                                            </span>
+                                          </div>
+                                        </a>
+                                      </div>
+    
+                                      <div class="ag-courses_item">
+                                        <a href="Home Page.html" class="ag-courses-item_link">
+                                          <div class="ag-courses-item_bg"></div>
+                                  
+                                          <div class="ag-courses-item_title"> Events
+                                          </div>
+    
+                                          <div class="ag-courses-item_date-box">
+                                            CETVent Landing Page
+                                          </div>
+    
+                                          
+                                        </a>
+                                      </div>
+    
+                                      <div class="ag-courses_item">
+                                        <a href="https://portal.udm.edu.ph/register/" class="ag-courses-item_link">
+                                          <div class="ag-courses-item_bg"></div>
+                                  
+                                          <div class="ag-courses-item_title">
+                                            Portal
+                                          </div>
+    
+                                          <div class="ag-courses-item_date-box">
+                                            Universidad De Manila Portal
+                                          </div>
+                                        </a>
+                                      </div>
+    
+                                      <div class="ag-courses_item">
+                                        <a href="#" class="ag-courses-item_link">
+                                          <div class="ag-courses-item_bg"></div>
+                                  
+                                          <div class="ag-courses-item_title">
+                                            404
+                                          </div>
+    
+                                          <div class="ag-courses-item_date-box">
+                                            404 Page
+                                          </div>
+                                        </a>
+                                      </div>
+                                    </div> 
+                                  </div>
+    
+    
+                                  <div class="in-container">
+    
+                                    <div class="form2">
+                                      <div class="signup-title"> SIGN UP</div>
+                                      <form class="signup-form">
+                                        <input type="signup-text"
+                                        placeholder=" Create Username"/>
+                                        <input type="signup-password"
+                                        placeholder="Create Password"/>
+                                        <input type="signup-text"
+                                        placeholder=" Year & Section"/>
+                                        <input type="signup-password"
+                                        placeholder="Email"/>
+                                        <button>Confirm</button>
+                                      </form>
+    
+                                      
+                                    </div>
+                                </div>
+        </div>
+        </body>
+        </html>
+</div>

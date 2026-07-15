@@ -1,0 +1,2460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cedarville+Cursive&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cedarville+Cursive&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cedarville+Cursive&family=Courgette&family=Didact+Gothic&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Satisfy&display=swap" rel="stylesheet">
+        
+    <!---CSS--->
+        <title>CETVent</title>
+        <style>
+
+            html {
+              scroll-behavior: smooth;
+            }
+
+            body {
+                height: 100px;
+                width: auto;
+                margin: 0;
+                padding: 0;
+                overflow-y: scroll; overflow-x: hidden;
+            }
+
+            #bg {
+                background-image: url(FullBackground.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+
+            }
+
+            #space {
+                height: 980px;
+                position: sticky;
+                z-index: 2; /* Lowered z-index so it doesn't overlap the nav */
+             }
+             
+            #imgbg {
+                height: 100vh;
+                display: flex; 
+                align-items: center; 
+                justify-content: center; 
+            }
+
+            .container {
+                position:fixed;
+                margin-top: 20px;
+                margin-right: 20px;
+                margin-left: 1150px;
+                width: 6000px;
+                }
+
+                /* The navbar */
+            .topnav {
+                overflow: hidden;
+                font-family: Arial, Helvetica, sans-serif;
+                margin-left: 900px;
+                padding-top: 20px;
+                align-items: center;
+                justify-content: space-around;
+                display: flex;
+                width: 800px;
+                scroll-behavior: smooth;
+                }
+
+                /* Navbar links */
+            .topnav a {
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 20px;
+                border-bottom: 3px solid transparent;
+                }
+
+            .topnav a:hover {
+                color: rgba(249, 127, 28, 0.8); 
+                border-bottom: 3px solid rgba(249, 127, 28, 0.8); 
+                border-bottom-left-radius: 0%;
+                }
+
+            .topnav a.active {
+                border-bottom: 3px solid rgba(249, 127, 28, 0.8); 
+                }
+
+
+            /* Drop Down */
+
+            .dropbtn {
+                color: rgb(0, 0, 0);
+
+                font-size: 5px;
+                cursor: pointer;
+                text-align: center;
+                }
+
+            .dropdown {
+                text-align: center;
+                opacity: 0.8;
+                color: #000000;
+                }
+
+            .dropdown-content {
+                width: 180px;
+                margin-right: 320px;
+                margin-top: 230px;
+                display: none;
+                position: absolute;
+                min-width: 160px;
+                overflow: auto;
+                box-shadow:50px rgba(250, 249, 249, 0.8);
+                z-index: 1;
+                background-color: rgba(249, 127, 28, 0.8);
+                border-radius: 5px;
+                
+                }
+
+            .dropdown-content a {
+                color: rgb(255, 255, 255);
+                margin-left: auto;
+                text-align: center;
+                }
+
+            .dropdown a:hover { background-color: #fe0202;}
+            .show {display: block;}
+
+            /* TITLE */
+
+            #title {
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bolder;
+                font-size: 150px;
+                width: 600px;
+                height: 300px;
+                margin-left: -900px;
+                margin-top: -150px;
+            
+                }
+
+            #college {
+                font-size: 35px;
+                color: #f0efed;
+                font-weight: bold;
+                margin: 10px 0 0; /* Space above */
+                margin-top: -20px;
+                margin-left: 10px;
+                }
+
+            #join {
+                font-size: 15px;
+                color: #f0efed;
+                margin-top: 20px;
+                margin-left: 10px;
+                font-weight: -10px;
+                opacity: 0.8;
+            }
+
+            .cets-container {
+                margin-top: -50px;
+                }
+
+            #cet, #vent {
+                font-size: 120px;
+                letter-spacing: 5px; 
+                font-weight: bold;
+                display: inline-block; 
+                margin-top: -100px;
+                }
+
+            #cet {
+                color: rgba(249, 127, 28, 1);
+                }
+
+            #vent {
+                color: #f0efed;
+                margin-left: -40px;
+                }
+
+        /* MIDDLE PART BACKGROUND */
+
+        .body {
+            width: 1650px;
+            height: 4500px;
+            margin-left: 70px;
+            margin-top: -200px;
+        }
+
+
+        /* PHOTOS */
+
+        .card-container {
+            display: flex;
+            padding-left: 0px;
+            padding-right: 60px;
+            padding-top: -50px;
+        }
+
+        .card {
+            border-radius:0px;
+            margin-left: 20px;
+            height: 400px;
+            background-color: #9d9d9d;
+            flex: 1;
+            transition: .3s all ease;
+            height: 500px;
+        }
+
+        .card:hover {
+            flex:1.8;
+            background-color: rgb(207 , 207 , 207);
+        }
+
+        /* Search Bar */
+
+        * {
+        box-sizing: border-box;
+
+        }
+
+        body {  
+            padding-left: 500px;
+            padding: 0px;   
+            width: -1px;
+            height: 90vh;
+            background-color: rgb(255, 255, 255);
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        .search-container {
+            position: relative;
+            width: fit-content;
+            height: fit-content;
+            padding-right: -100px;
+        }
+
+        .input-search {
+            border-style: none;
+            padding: 10px;
+            height: 50px;
+            width: 50px;
+            font-size: 20px;
+            letter-spacing: 2px;
+            background-color: transparent;
+            outline: none;
+            border-radius: 25px;
+            padding-right: 40px;
+            color: #ffffff;
+            transition: all .5s ease-in-out;
+        }
+
+        .input-search::placeholder {
+            font-size: 18px;
+            letter-spacing: 2px;
+            font-weight: 100;
+            color: rgb(255, 255, 255);
+        }
+
+        .btn-search {
+            border-style: none;
+            font-size: 20px;
+            position: absolute;
+            font-weight: bold;
+            width: 50px;
+            height: 50px;
+            outline: none;
+            cursor: pointer;
+            right: 0;
+            color: #fffbfb;
+            background-color: transparent;
+            pointer-events: painted;
+        }
+
+        .btn-search:focus ~ .input-search{
+            border-radius: 0px;
+            background-color: transparent;
+            width: 300px;
+            border-bottom: 1px solid rgb(255, 255, 255);
+            transition: all 500ms cubic-bezier(0, 0.10, 0.35, 2);
+        }
+
+        .input-search:focus {
+            border-radius: 0px;
+            width: 300px;
+            border-bottom: 1px solid rgba(249, 127, 28, 1);
+            background-color: transparent;
+            transition: all 500ms cubic-bezier(0, 0.10, 0.35, 2);
+        }
+
+
+        /* Clock */
+
+        .clock-container {
+            width: 180px;
+            height: 50px;
+            border-radius: 10px;
+            margin-left: 1500px;
+            margin-top: 10px;
+        }
+
+        .clock-time {
+            font-size: 40px;
+            font-family:Arial, Helvetica, sans-serif;
+            color: white;
+        }
+
+
+        /*DID YOU KNOW CONTAINER*/
+
+        .whatisthis-container {
+            width: 1000px;
+            height: 400px;
+            margin-top: 350px;
+            margin-left: 600px;
+            margin-bottom: 100px;
+
+            #whatisthis {
+              font-size: 21px;
+              color: black;
+              text-align: justify;
+              padding-top: 50px;
+              padding-left: 10px;
+              padding-right: 100px;
+              font-family: "Didact Gothic", sans-serif;
+            }
+        }
+
+        :root {
+        --light-gray : rgba(249, 127, 28, 1);
+        --dark-gray: #202b25;
+        --gray: rgb(184, 177, 177);
+        --dark-blue: #000000;
+        --light-blue: #b11919;
+      }
+
+
+              #computer {
+          position: absolute;
+          width: 340px;
+          height: 300px;
+          margin-top: 120px;
+          margin-left: -300px;
+          transform: translate(-50%, -50%);
+          background:
+
+          /* Bottom Section */
+          repeating-linear-gradient(90deg, var(--gray) 0 10px, var(--light-gray) 10px 18px) 258px 236px / 64px 10px,
+          repeating-linear-gradient(90deg, var(--dark-gray) 0 10px, var(--light-gray) 10px 18px) 258px 246px / 64px 38px,
+          linear-gradient(var(--dark-gray), var(--dark-gray)) 166px 264px / 10px 14px,
+          linear-gradient(var(--light-gray) 10px, var(--dark-gray) 10px) 144px 248px / 80px 20px,
+          linear-gradient(90deg, var(--dark-gray) 10px, var(--gray) 10px) 124px 236px / 110px 48px,
+          linear-gradient(90deg, var(--gray) 10px, var(--light-gray) 10px) 90px 230px / 250px 60px,
+          linear-gradient(90deg, var(--gray) 10px, var(--light-gray) 10px) 100px 220px / 240px 80px,
+          linear-gradient(var(--dark-gray), var(--dark-gray)) 10px bottom / 330px 80px,
+          linear-gradient(var(--dark-gray), var(--dark-gray)) left bottom / 320px 70px,
+          
+          /* Top Section */
+          linear-gradient(90deg, var(--gray) 18px, var(--light-gray) 18px 26px, var(--gray) 26px 36px, var(--dark-gray) 36px 122px, var(--light-gray) 122px 160px, var(--gray) 160px) 120px 180px / 170px 10px,
+          linear-gradient(var(--gray) 10px, var(--dark-blue) 10px 150px, var(--gray) 150px) 130px 10px / 150px 160px,
+          linear-gradient(90deg, var(--gray) 10px, var(--dark-blue) 10px 180px, var(--gray) 180px) 110px 30px / 190px 120px,
+          linear-gradient(var(--gray), var(--gray)) 120px 20px / 170px 140px,
+          linear-gradient(var(--light-gray), var(--light-gray)) 110px top / 190px 200px,
+          linear-gradient(90deg, var(--gray) 10px, var(--light-gray) 10px) 90px 10px / 220px 180px,
+          linear-gradient(var(--gray), var(--gray)) 100px top / 200px 200px,
+          linear-gradient(var(--dark-gray), var(--dark-gray)) 40px top / 260px 200px,
+          linear-gradient(90deg, var(--dark-gray) 50%, var(--light-gray) 50%) 30px 10px / 280px 180px,
+
+          /* Back section */
+          linear-gradient(90deg, var(--dark-gray) 96px, var(--gray) 96px) 70px 210px / 216px 14px,
+          linear-gradient(var(--dark-gray), var(--dark-gray)) 90px 190px / 178px 30px;
+          background-repeat: no-repeat;
+        }
+
+        #computer::before {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          top: 95px;
+          left: 175px;
+          background-color: var(--light-blue);
+          animation: hello 3500ms linear infinite forwards alternate;
+        }
+
+        @keyframes hello {
+          0%, 18% {
+            box-shadow: 
+            0 0 0 var(--light-blue),
+            0 0 0 var(--light-blue),
+            0 0 0 var(--light-blue),
+            0 0 0 var(--light-blue),
+            0 0 0 var(--light-blue),
+            0 0 0 var(--light-blue),
+            40px -30px 0 var(--light-blue),
+            40px -20px 0 var(--light-blue),
+            10px -30px 0 var(--light-blue),
+            10px -20px 0 var(--light-blue),
+            50px 0 0 var(--light-blue),
+            40px 10px 0 var(--light-blue),
+            30px 10px 0 var(--light-blue),
+            20px 10px 0 var(--light-blue),
+            10px 10px 0 var(--light-blue);
+          }
+          24%, 38% {
+            box-shadow:
+            0 0 0 var(--light-blue),
+            0 0 0 var(--light-blue),
+            0 0 0 var(--light-blue),
+            0 0 0 var(--light-blue),
+            0 0 0 var(--light-blue),
+            0 0 0 var(--light-blue),
+            50px -30px 0 var(--light-blue),
+            40px -20px 0 var(--light-blue),
+            0 -30px 0 var(--light-blue),
+            10px -20px 0 var(--light-blue),
+            50px 0 0 var(--light-blue),
+            40px 10px 0 var(--light-blue),
+            30px 0 0 var(--light-blue),
+            20px 10px 0 var(--light-blue),
+            10px 10px 0 var(--light-blue);
+          }
+          44%, 58% {
+            box-shadow:
+            0 0 0 var(--light-blue),
+            0 0 0 var(--light-blue),
+            0 0 0 var(--light-blue),
+            0 0 0 var(--light-blue),
+            0 0 0 var(--light-blue),
+            50px -30px 0 var(--light-blue),
+            50px 0 0 var(--light-blue),
+            40px 10px 0 var(--light-blue),
+            30px -20px 0 var(--light-blue),
+            30px 0 0 var(--light-blue),
+            30px 10px 0 var(--light-blue),
+            10px -10px var(--light-blue),
+            0 -30px 0 var(--light-blue),
+            0 -20px 0 var(--light-blue),
+            0 10px 0 var(--light-blue);
+          }
+          64%, 78% {
+            box-shadow:
+            0 0 0 var(--light-blue),
+            0 0 0 var(--light-blue),
+            0 0 0 var(--light-blue),
+            0 0 0 var(--light-blue),
+            50px -30px 0 var(--light-blue),
+            50px 0 0 var(--light-blue),
+            50px 10px 0 var(--light-blue),
+            30px -30px 0 var(--light-blue),
+            30px -20px 0 var(--light-blue),
+            30px 0 0 var(--light-blue),
+            30px 10px 0 var(--light-blue),
+            10px -10px var(--light-blue),
+            0 -30px 0 var(--light-blue),
+            0 -20px 0 var(--light-blue),
+            0 10px 0 var(--light-blue);
+          }
+          84%, 100% {
+            box-shadow:
+            50px -30px 0 var(--light-blue),
+            50px -10px 0 var(--light-blue),
+            50px 0 0 var(--light-blue),
+            50px 10px 0 var(--light-blue),
+            30px -30px 0 var(--light-blue),
+            30px -20px 0 var(--light-blue),
+            30px -10px 0 var(--light-blue),
+            30px 0 0 var(--light-blue),
+            30px 10px 0 var(--light-blue),
+            20px -10px 0 var(--light-blue),
+            10px -10px 0 var(--light-blue),
+            0 -30px 0 var(--light-blue),
+            0 -20px 0 var(--light-blue),
+            0 -10px var(--light-blue),
+            0 10px 0 var(--light-blue);
+          }
+        }
+
+              .whatisthis-header {
+                font-size: 50px;
+                color: rgba(249, 127, 28, 1);
+                font-family:"Audiowide", sans-serif;
+                font-weight: bold;
+                overflow: hidden;
+                border-right: 0.15em solid rgba(249, 127, 28, 1);
+                white-space: nowrap;
+                letter-spacing: 0.15em;
+                animation: typing 2.5s steps(40, end) , blink-caret .5s step-end infinite;
+                margin-top: -150px;
+                width: 520px;
+
+              }
+
+              @keyframes typing {
+                from {width: 0;}
+                to {width: 520px;}
+              }
+
+              @keyframes blink-caret {
+                from,to {border-color: transparent;}
+                50% {border-color: rgba(249, 127, 28, 1)}
+              }
+        
+
+
+        /*CAROUSELL CONTAINER / GREEN BACKGROUND*/
+      
+        .carousell-container {
+          width: 1800px;
+          height: 500px;
+          rotate: -3deg;
+          margin-left: -100px;
+          margin-top: 50px;
+          padding-top: 0px;
+          padding-left: 100px;
+          position: relative;
+        }
+
+        .carousell-header {
+          font-size: 100px;
+          font-weight: bold;
+          font-family: Segoe Script;
+          color: rgba(249, 127, 28, 1);
+          rotate: 3deg;
+          padding-left: 750px;
+          padding-right: 50px;
+          padding-top: 100px;
+          text-align: right;
+          height: 100px;
+          line-height: 80px;
+        }
+
+
+
+  /*SLIDESHOW */
+
+        * {box-sizing: border-box}
+          body {font-family: Verdana, sans-serif; margin:0}
+          .mySlides {display: none}
+          img {vertical-align: middle;}
+
+          .slideshow {
+            width: 100%;
+            height: 500px;
+            background-color:#f0efed;
+            margin-top: 30px;
+            flex: 0.1;
+            transition: .5s all ease;
+                background-size: cover;
+                background-repeat: no-repeat;
+          }
+
+          .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin-left: -80px;
+            margin-top: -180px;
+            rotate: 3deg;
+            background-color:#000000;
+          }
+
+
+
+          .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            padding-top: 5px;
+            padding-left: 10px;
+            margin-top: 20px;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            rotate: 5deg;
+
+          }
+
+          /* Position the "next button" to the right */
+          .next {
+            margin-left: 790px;
+            margin-top: 180px;
+            background-color: rgba(249, 127, 28, 1);
+            width: 30px;
+            height: 35px;
+            rotate: 10deg;
+          }
+
+          .prev {
+            margin-left: 757px;
+            margin-top: 174px;
+            background-color: rgba(249, 127, 28, 1);
+            width: 30px;
+            height: 35px;
+            rotate: 10deg;
+          }
+
+          .next:before {
+            content:"";
+            position: absolute;
+            left: auto;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 0;
+            background-color: white;
+            z-index: -1;
+            transition: 0.6s;
+          }
+
+          .prev:before {
+            content:"";
+            position: absolute;
+            left: 0;
+            right: auto;
+            top: 0;
+            height: 100%;
+            width: 0;
+            background-color: white;
+            z-index: -1;
+            transition: 0.6s;
+
+          }
+
+          .next:hover:before {
+            left: 0;
+            right: auto;
+            width: 100%;
+          }
+
+          .prev:hover:before {
+            left: auto;
+            right: 0;
+            width: 100%;
+          }
+
+
+          /* Caption text */
+          .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+          }
+
+          /* Number text (1/3 etc) */
+          .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+            display: none;
+          }
+
+          /* Fading animation */
+          .fade {
+
+            animation-duration: 1.5s;
+          }
+
+          @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+          }
+
+          /* On smaller screens, decrease text size */
+          @media only screen and (max-width: 300px) {
+            .text {font-size: 11px}
+          }
+
+
+          /*GREEN CONTAINER Part*/
+
+          .carousell2-container {
+          width: 1800px;
+          height: 600px;
+          background-color: #202b25;
+          margin-left: -100px;
+          margin-top: 20px;
+          padding-top: 100px;
+          padding-left: 50px;
+          rotate: 3deg;
+        }
+
+        .slidetext-container {
+          width: 600px;
+          height: 500px;
+          padding-top: -250px;
+          rotate: -3deg;
+          margin-top: -130px;
+        }
+
+        .slide-header {
+          font-size: 75px;
+          font-weight: bolder;
+          font-family: Leelawadee system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          color: white;
+          margin-top: -50px;
+        }
+
+        .slide-sideheader {
+          font-size: 60px;
+          font-family:fantasy;
+          color: rgba(249, 127, 28, 1);
+          font-family: Segoe Script;
+          font-weight: bold;
+          margin-top: -30px;
+          margin-left: 20px;
+        }
+
+        .slide-text {
+          font-size: 20px;
+          color: rgb(219, 216, 216);
+          text-align: justify;
+          padding-left: 50px;
+          padding-right: 130px;
+          font-family: "Didact Gothic", sans-serif;
+        }
+
+        .sliderandom-container {
+          width: 1500px;
+          height: 200px;
+          margin-left: 750px;
+          margin-top: -10px;
+          rotate: -3deg;
+
+        }
+
+        .randomslide {
+          width: 1000px;
+          height: 250px;
+          background-color: rgb(22, 22, 21);
+          margin-left: 800px;
+          margin-top: -200px;
+          rotate: -3deg;
+          padding-left: 50px;
+          padding-right: 100px;
+          padding-top: 60px;
+            font-size: 16px;
+            color: rgb(219, 216, 216);
+            text-align: justify;
+            font-family: "Didact Gothic", sans-serif;
+
+        }
+
+        .learnmore2-container {
+            width: 100px;
+            height: 25px;
+            border-radius: 10px;
+            margin-left: 1600px;
+            margin-top: 150px;
+            padding-top: 2px;
+            padding-left: 7px;
+            background-color: rgb(249, 127, 28, 1);
+            rotate: -3deg;
+        }
+
+        .learnmore2-container:before {
+            content:"";
+            position: absolute;
+            left: auto;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 0;
+            background-color: white;
+            transition: 1.0s;
+            border-radius: 10px
+          }
+
+          .learnmore2-container:hover:before , .learnmore2-container:hover:before {
+            left: 0;
+            right: auto;
+            width: 100%;
+            border-radius: 10px
+          }
+
+          .learnmore2-container a {
+          font-size: 15px;
+          color: rgb(22, 22, 21);
+          text-decoration: none;
+          font-weight: 500;
+        }
+
+        
+
+        /* SLIDE 1 */
+
+              .slide1 {
+              position: relative;
+              width: 300px;
+              height: 200px;
+              display:flex;
+              margin-left: -250px;
+              margin-top: -430px;
+               
+            }
+
+            .slide1-image {
+              display: block;
+              width: 100%;
+              height: auto;
+            }
+
+            .slide1-overlay {
+              position: absolute;
+              bottom: 100%;
+              left: 0;
+              right: 0;
+              background-color: white;
+              overflow: hidden;
+              width: 100%;
+              height:0;
+              transition: .9s ease;
+              opacity: 0.8;
+            }
+
+            .slide1:hover .slide1-overlay {
+              bottom: 0;
+              height: 100%;
+              
+            }
+
+            .slide1-text {
+              color: black;
+              font-size: 16px;
+              text-align: justify;
+              font-family: "Didact Gothic", sans-serif;
+              position: absolute;
+              top: 65%;
+              left: 50%;
+              right: -35%;
+              bottom: -70%;
+              -webkit-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+              
+
+            }
+
+
+            /* SLIDE 2 */
+            
+            .slide2 {
+              position: relative;
+              width: 300px;
+              height: 200px;
+              display:flex;
+              margin-left: 60px;
+              margin-top: -200px;
+              opacity: 0.8;
+            }
+
+            .slide2-image {
+              display: block;
+              width: 100%;
+              height: auto;
+            }
+
+            .slide2-overlay {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              background-color: rgb(255, 255, 255);
+              overflow: hidden;
+              width: 100%;
+              height:0;
+              transition: .9s ease;
+              opacity: 0.8;
+            }
+
+            .slide2:hover .slide2-overlay {
+              height: 100%;
+            }
+
+            .slide2-text {
+              color: black;
+              font-size: 16px;
+              text-align: justify;
+              font-family: "Didact Gothic", sans-serif;
+              position: absolute;
+              top: 65%;
+              left: 50%;
+              right: -35%;
+              bottom: -70%;
+              -webkit-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+            }
+
+
+        /* SLIDE 3 */
+
+        .slide3 {
+              position: relative;
+              width: 300px;
+              height: 200px;
+              display:flex;
+              margin-left: 370px;
+              margin-top: -200px;
+            }
+
+            .slide3-image {
+              display: block;
+              width: 100%;
+              height: auto;
+            }
+
+            .slide3-overlay {
+              position: absolute;
+              bottom: 100%;
+              left: 0;
+              right: 0;
+              background-color: rgb(255, 255, 255);
+              overflow: hidden;
+              width: 100%;
+              height:0;
+              transition: .9s ease;
+              opacity: 0.8;
+            }
+
+            .slide3:hover .slide3-overlay {
+              bottom: 0;
+              height: 100%;
+            }
+
+            .slide3-text {
+              color: black;
+              font-size: 16px;
+              text-align: justify;
+              font-family: "Didact Gothic", sans-serif;
+              position: absolute;
+              top: 65%;
+              left: 50%;
+              right: -35%;
+              bottom: -70%;
+              -webkit-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+            }
+
+            /* SLIDE 4 */
+            
+            .slide4 {
+              position: relative;
+              width: 300px;
+              height: 200px;
+              display:flex;
+              margin-left: 680px;
+              margin-top: -200px;
+            }
+
+            .slide4-image {
+              display: block;
+              width: 100%;
+              height: auto;
+            }
+
+            .slide4-overlay {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              background-color: white;
+              overflow: hidden;
+              width: 100%;
+              height:0;
+              transition: .9s ease;
+              opacity: 0.8;
+            }
+
+            .slide4:hover .slide4-overlay {
+              height: 100%;
+            }
+
+            .slide4-text {
+              color: black;
+              font-size: 16px;
+              text-align: justify;
+              font-family: "Didact Gothic", sans-serif;
+              position: absolute;
+              top: 65%;
+              left: 48%;
+              right: -33%;
+              bottom: -70%;
+              -webkit-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+            }
+
+            /* CIRCLE CONTAINER */
+
+            .circle-header {
+              width: 1200px;
+              height: 250px;
+              margin-left: 50px;
+              margin-top: 130px;
+              rotate: 0deg;
+              margin-bottom: -100px;
+              
+              #header {
+                font-size: 70px;
+                font-family: "Cedarville Cursive", cursive;
+                color: rgba(22, 22, 21);
+                font-weight: bolder;
+                line-height: 1;
+                
+              }
+              #body {
+                font-size: 20px;
+                font-family: Trebuchet MS;
+                padding-left: 10px;
+                padding-top: 10px;
+              }
+            }
+
+            .boxofcircle-container {
+              width: 1500px;
+              height: 900px;
+              margin-left: -400px;
+              margin-top: 100px;
+              rotate: -0deg;
+              background-color: rgb(249, 127, 28, 1);
+              border-radius: 90%;
+            }
+
+                      .circle1-container {
+                        width: 900px;
+                        height: 350px;
+                        margin-left: 1100px;
+                        margin-top: 10px;
+                        border-radius: 20px;
+                      }
+
+                      .circle2-container {
+                        width: 1000px;
+                        height: 500px;
+                        margin-left: 290px;
+                        margin-top: 10px;
+                        border-radius: 20px;
+                      }
+
+
+                      .circle4-container {
+                        width: 600px;
+                        height: 300px;
+                        margin-left: 1450px;
+                        margin-top: -5px;
+                        border-radius: 20px;
+                      }
+
+
+            
+              .circle2-text-container {
+                width: 800px;
+                height: 250px;
+                margin-left: 600px;
+                margin-top: -250px;
+
+                #circle2-text {
+                  font-size: 18px;
+                  color: black;
+                  line-height: 1.5;
+                  text-align: justify;
+                  font-weight: bold;
+                  font-family: "Didact Gothic", sans-serif;
+                }
+              }
+
+              .midheader-container {
+                width: 500px;
+                height: 400px;
+                margin-left: 1320px;
+                margin-top: -770px;
+                text-align: left;
+
+                #midheader {
+                  font-size: 100px;
+                  color: #fe0202;
+                  font-family: "Satisfy", serif;
+                  font-weight: bolder;
+                  line-height: 1.2;
+                }
+              }
+
+              .circle3-text-container {
+                width: 800px;
+                height: 250px;
+                margin-left: 1220px;
+                margin-top: -200px;
+                padding-left: 450px;
+
+                #circle3-text {
+                  font-size: 18px;
+                  color: rgb(249, 127, 28, 1);
+                  line-height: 1.5;
+                  text-align: justify;
+                  font-weight: bold;
+                  font-family: "Didact Gothic", sans-serif;
+                }
+              }
+
+              .register-container {
+                width: 100px;
+                height: 25px;
+                margin-left: 1930px;
+                margin-top: -85px;
+                padding-top: 2px;
+                padding-left: 7px;
+                background-color: rgb(22, 22, 21);;
+                rotate: -10deg;
+            }
+
+            .register-container:before {
+                content:"";
+                position: absolute;
+                left: auto;
+                right: 0;
+                top: 0;
+                height: 100%;
+                width: 0;
+                background-color: white;
+                transition: 1.0s;
+              }
+
+              .register-container:hover:before , .register-container:hover:before {
+                left: 0;
+                right: auto;
+                width: 80%;
+              }
+
+              .register-container a {
+              font-size: 16px;
+              color:  WHITE;
+              text-decoration: none;
+              font-weight: 500;
+            }
+        
+
+        
+
+
+      
+
+        /*MIDBOX CONTAINER*/
+
+        .mid-bigbox {
+            width: 1802px;
+            height: 580px;
+            margin-top: -300px;
+            margin-left: 0px;
+            padding-top: 0.1px;
+            background-color: rgba(22, 22, 21);
+
+        }
+
+        .randombox {
+            width: 480px;
+            height: 60px;
+            background-color: rgb(249, 127, 28, 1);
+            margin-top: -40px;
+            margin-left: 670px;
+            position: inherit;
+            rotate: 3deg;
+        }
+
+        .randombox2 {
+            width: 400px;
+            height: 200px;
+            margin-top: -160px;
+            margin-left: 720px;
+            padding-top: 100px;
+            margin-bottom: -50px;
+            position: inherit;
+            rotate: -0deg;
+                font-size: 80px;
+                font-weight: bold;
+                font-family: "Audiowide", sans-serif;
+                padding-left: 30px;
+                color: rgb(252, 252, 252);
+        }
+
+        .learnmore3-container {
+            width: 100px;
+            height: 25px;
+            border-radius: 10px;
+            margin-left: 1270px;
+            margin-top: 30px;
+            padding-top: 2px;
+            padding-left: 7px;
+            background-color: rgb(249, 127, 28, 1);
+            rotate: -0deg;
+        }
+
+        .learnmore3-container:before {
+            content:"";
+            position: absolute;
+            left: auto;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 0;
+            background-color: white;
+            transition: 1.0s;
+            border-radius: 10px
+          }
+
+          .learnmore3-container:hover:before , .learnmore3-container:hover:before {
+            left: 0;
+            right: auto;
+            width: 100%;
+            border-radius: 10px
+          }
+
+          .learnmore3-container a {
+          font-size: 15px;
+          color: rgb(22, 22, 21);
+          text-decoration: none;
+          font-weight: 500;
+        }
+
+        #midbox-container {
+            padding-left: -50px;
+            padding-right: 130px;
+            padding-top: -1500px;
+            padding-bottom: 50px;
+            width: 1502px;
+            height: 500px;
+            margin-left: 200px;
+        }
+
+        .midbox-text1 {
+            font-size: 20px;
+            color: rgb(248, 247, 247);
+            font-family: "Didact Gothic", sans-serif;
+            text-align:justify;
+            padding-top: 100px;
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+        .midbox-text2 {
+            font-size: 20px;
+            color: rgb(253, 253, 253);
+            font-family: "Didact Gothic", sans-serif;
+            text-align:justify;
+            padding-top: 50px;
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+       
+        .slides-container {
+            width: 1802px;
+            height: 700px;
+            margin-top: 50px;
+            padding-left: -10px;
+            margin-bottom: -200px;
+        }
+
+        #mySlides1 {
+            width: 100%;
+            height: 500%;
+            margin-top: 550px;
+            padding-top: -500px;
+            padding-left: -80px;
+        }
+
+        .row:after {
+        content: "";
+        display: table;
+        }
+
+        /* Add a transparency effect for thumnbail images */
+        .demo {
+        opacity: 0.6;
+        transition: width 2s;
+        
+        }
+
+        .active,
+        .demo:hover {
+        opacity: 1;
+        transition: 0.5s all ease;
+        }
+
+        .column {
+            float:inline-end;
+            width: 16.66%;
+            margin-left: -146px;
+            margin-top: -0px;
+            padding-left: -10px;
+            }
+
+
+            /* LARGE PHOTO CONTAINER*/
+
+            .bigphoto-container {
+              width: 1750px;
+              height: 700px;
+              margin-top: 200px;
+              margin-left: 0px;
+                animation: slider 20s linear infinite;
+            }
+
+            @keyframes slider {
+              100% {background-image: url(photobox.jpg)}
+              20% {background-image: url(photobox2.jpg)}
+              30% {background-image: url(photobox3.jpg)}
+              40% {background-image: url(photobox4.jpg)}
+              50% {background-image: url(photobox5.jpg)}
+              60% {background-image: url(photobox6.jpg)}
+              70% {background-image: url(photobox.jpg)}
+              80% {background-image: url(photobox3.jpg)}
+              90% {background-image: url(photobox6.jpg)}
+              100% {background-image: url(photobox7.jpg)}
+            }
+
+            /* LARGE PHOTO CONTAINER*/
+
+            .photobox-container {
+              width: 1300px;
+              height: 400px;
+              background-color: rgb(47, 32, 32);
+              margin-left: 220px;
+              margin-top: -200px;
+            }
+
+
+            /* MAP CONTAINER */
+
+            .cards-container {
+              width: 600px;
+              height: 800px;
+              margin-left: -50px;
+              margin-top: -800px;
+            }
+
+            .map-header {
+              width: 700px;
+              height: 100px;
+              line-height: 0.8;
+
+
+              #map-text {
+                font-size: 80px;
+                color: rgba(249, 127, 28, 1);
+                font-family: Segoe Script;
+                font-weight: bolder;
+                padding-left: 150px;
+                padding-top: 130px;
+                rotate: -0deg;
+              }
+            }
+
+            .media-container {
+              width: 300px;
+              height: 460px;
+              margin-left: 250px;
+              margin-top: 40px;
+                font-size: 20px;
+                text-align: justify;
+                line-height: 1.2;
+                font-family: "Didact Gothic", sans-serif;
+            }
+
+            /* MAP */
+
+            .flip-container {
+              position: relative;
+              width: 1200px;
+              height: 700px;
+              transform-style: preserve-3d;
+              transition:  all 0.5s ease-in-out;
+                margin-left: 550px;
+                margin-top: 200px;
+                background-color: #c3c8c5;
+            }
+
+            .flip-container:hover {
+              transform: rotateY(180deg);
+            }
+
+            .front-map {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              backface-visibility: hidden;
+              display: flex;
+              align-items: center;
+            }
+
+            .back-map {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              backface-visibility: hidden;
+              display: flex;
+              align-items: center;
+            }
+
+            .front-map {
+              z-index: 2;
+            }
+
+            .back-map {
+              transform: rotateY(180deg);
+              width: 100%;
+            }
+
+
+
+          /* FOOTEEEERRRR */
+        
+        .footer {
+            width: 1800px;
+            height: 500px;
+            background-color: rgb(22, 22, 21);
+            margin-top: 2700px;
+            margin-left: 0px;
+        }
+
+         .contact {
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+            padding-left: 80px;
+            padding-top: 80px;
+         }
+
+         .questions-container {
+            width: 250px;
+            height: 40px;
+            margin-left: 90px;
+            margin-top: -5px;
+            rotate: -3deg;
+            background-color: rgba(249, 127, 28, 1);
+                font-size: 40px;
+                font-weight: bold;
+                color: rgb(22, 22, 21);
+                padding-left: 5px;
+                font-family: 'Courier New', Courier, monospace;
+         }
+
+         .details-container {
+            width: 500px;
+            height: 300px;            
+
+         }
+
+         #detail1 {
+            font-size: 18px;
+            font-family: "Didact Gothic", sans-serif;
+            color: white;
+            padding-left: 100px;
+            padding-top: 100px;
+         }
+
+         #detail2 {
+            font-size: 18px;
+            font-family: "Didact Gothic", sans-serif;
+            color: white;
+            padding-left: 100px;
+         }
+
+         #detail3 {
+            font-size: 18px;
+            font-family: "Didact Gothic", sans-serif;
+            color: white;
+            padding-left: 100px;
+            padding-top: 30px;
+         }
+
+         #detail4 {
+            font-size: 18px;
+            font-family: "Didact Gothic", sans-serif;
+            color: white;
+            padding-left: 100px;
+         }
+
+         /* EXPERIMENT? */
+
+         .ag-format-container {
+          width: 1250px;
+          margin-left: 1400px;
+          margin-top: -410px;
+        }
+
+        .ag-courses_item {
+          -ms-flex-preferred-size: calc(33.33333% - 30px);
+          flex-basis: calc(33.33333% - 30px);
+          margin: 0 10px 15px;
+          overflow: hidden;
+        }
+
+        .ag-courses-item_link {
+          display: block;
+          overflow: hidden;
+          position: relative;
+          width: 250px;
+          height: 70px;
+          padding-left: 20px;
+          text-decoration: none;
+          border-radius: 10px;
+        }
+
+        .ag-courses-item_link:hover .ag-courses-item_bg {
+          -webkit-transform: scale(10);
+          -ms-transform: scale(10);
+          transform: scale(10);
+        }
+        .ag-courses-item_title {
+          min-height: 87px;
+          margin: 0 0 25px;
+          overflow: hidden;
+          font-weight: bold;
+            font-size: 16px;
+            color: white;
+            z-index: 2;
+            position: relative;
+            text-decoration: none;
+            padding-left: 0px;
+            padding-top: 10px;
+            text-align: left;
+        }
+
+        .ag-courses-item_body {
+          min-height: 87px;
+          margin-left: 500px;
+          overflow: hidden;
+          font-weight: bold;
+            font-size: 16px;
+
+        }
+
+        .ag-courses-item_bg {
+          height: 128px;
+          width: 128px;
+          background-color: rgba(249, 127, 28, 1);
+          z-index: 1;
+          position: absolute;
+          top: -75px;
+          right: -75px;
+          border-radius: 30%;
+          -webkit-transition: all .9s ease;
+          -o-transition: all .9s ease;
+          transition: all .9s ease;
+        }
+    
+        @media only screen and (max-width: 979px) {
+          .ag-courses_item {
+            -ms-flex-preferred-size: calc(50% - 30px);
+            flex-basis: calc(50% - 30px);
+          }
+          .ag-courses-item_title {
+            font-size: 24px;
+          }
+        }
+
+        .ag-courses-item_date-box {
+          font-size: 11px;
+          color: #FFF;
+          z-index: 2;
+          position: relative;
+          margin-top: -80px;
+        }
+        .ag-courses-item_date {
+          font-weight: bold;
+          color: #f9b234;
+          -webkit-transition: color .5s ease;
+          -o-transition: color .5s ease;
+          transition: color .5s ease
+        }
+
+        @media only screen and (max-width: 767px) {
+          .ag-format-container {
+            width: 96%;
+          }
+
+        }
+        @media only screen and (max-width: 639px) {
+          .ag-courses_item {
+            -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+          }
+          .ag-courses-item_title {
+            min-height: 72px;
+            line-height: 1;
+
+            font-size: 24px;
+          }
+          .ag-courses-item_link {
+            padding: 22px 40px;
+          }
+          .ag-courses-item_date-box {
+            font-size: 16px;
+          }
+        }
+
+
+
+
+/*  LOG IN AND SIGN UP CONTAINER */
+
+      .in-container {
+        width: 900px;
+        height: 400px;
+        background-color: white;
+        border-radius: 30px;
+          margin-left: 480px;
+          margin-top: -430px;
+          padding: 50px 20px 200px 50px;
+
+      }
+
+    /*LOG IN CONTAINER */
+
+      .forms {
+        position: relative;
+        z-index: 1;
+        background-color: rgba(249, 127, 28, 1);
+        max-width: 350px;
+        height: 360px;
+        padding: 45px;
+          margin-top: -30px;
+          margin-left: -30px;
+          border-radius: 15px;
+          text-align: center;
+          box-shadow: 0 0 20px 0 
+            rgba(0, 0, 0, 0.2), 
+            0 5px 5px 0 rgba(0, 0, 0, 0.2);
+        }
+
+      .login-title {
+        font-size: 22px;
+        color: #000000;
+          padding-bottom: 20px;
+          font-family: "Didact Gothic", sans-serif;
+          font-weight: bolder;
+      }
+
+     .forms input {
+      font-family: "Didact Gothic", sans-serif;
+      outline: 5;
+      border-radius: 16px;
+      background-color: rgb(255, 255, 255);
+      width: 100%;
+      border: 0;
+      margin: 10px 0px 5px;
+      padding: 15px;
+      box-sizing: border-box;
+      font-size: 16px;
+     }
+
+     .forms button {
+      font-family:"Didact Gothic", sans-serif;
+      outline: 0;
+      background: #202b25;
+      width: 100px;
+      height: 25px;
+      border-radius: 10px;
+      border: 0;
+      padding-left: 5px;
+      color: white;
+      font-size: 14px;
+      -webkit-transition: all 0.3 ease;
+      transition: all 0.3 ease;
+      cursor: pointer;
+      margin-top: 25px;
+      margin-bottom: 10px;
+     }
+
+     .forms button:hover, 
+     .forms button:active,
+     .forms button:focus {
+      background: white;
+      font-size: 14px;
+      color: #000000;
+      font-weight: bold;
+     }
+
+     .forms .form-messages {
+      margin: 5px 0 0;
+      color: #b3b3b3;
+      font-size: 12px;
+     }
+
+     .forms .form-message a {
+      margin: 15px 0 0;
+      text-decoration: none;
+     }
+
+     .login-body {
+      background: linear-gradient(360deg rgba(35, 60, 20, 0.356) 0%, rgba(7, 18, 102) 50%);
+      font-family: "Didact Gothic", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin-top: 100px;
+     }
+
+      /*SIGN UP CONTAINER */
+
+      .form2 {
+        position: relative;
+        z-index: 1;
+        max-width: 500px;
+        height: 360px;
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 30px;
+          margin-top: -360px;
+          margin-left: 330px;
+          border-radius: 15px;
+          text-align: center;
+          box-shadow: 0 0 20px 0 
+            rgba(0, 0, 0, 0.2), 
+            0 5px 5px 0 rgba(0, 0, 0, 0.2);
+            background-color: white;
+        }
+
+      .signup-title {
+        font-size: 22px;
+        color: #000000;
+          padding-bottom: 20px;
+          margin-top: -20px;
+          font-family: "Didact Gothic", sans-serif;
+          font-weight: bolder;
+      }
+
+     .form2 input {
+      font-family: "Didact Gothic", sans-serif;
+      outline: 5;
+      border-radius: 10px;
+      background-color: rgb(228, 226, 226);
+      width: 100%;
+      height: 40px;
+      border: 0;
+      margin: 0 0 5px;
+      padding-left: 30px;
+      box-sizing: border-box;
+      font-size: 16px;
+     }
+
+     .form2 button {
+      font-family:"Didact Gothic", sans-serif;
+      outline: 0;
+      background: #202b25;
+      width: 100px;
+      height: 25px;
+      border-radius: 10px;
+      border: 0;
+      padding-left: 5px;
+      color: white;
+      font-size: 14px;
+      -webkit-transition: all 0.3 ease;
+      transition: all 0.3 ease;
+      cursor: pointer;
+      margin-bottom: 20px;
+      margin-top: 15px;
+     }
+
+     .form2 button:hover, 
+     .form2 button:active,
+     .form2 button:focus {
+      background: white;
+      font-size: 15px;
+      color: #000000;
+      font-weight: bold;
+     }
+
+     .form2 .form2-messages {
+      margin: 5px 0 0;
+      color: #b3b3b3;
+      font-size: 12px;
+     }
+
+     .form2 .form2-message a {
+      margin: 15px 0 0;
+      text-decoration: none;
+     }
+
+     .signup-body {
+      background: linear-gradient(360deg rgba(35, 60, 20, 0.356) 0%, rgba(7, 18, 102) 50%);
+      font-family: "Didact Gothic", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin-top: 100px;
+     }
+
+
+
+    
+
+
+
+                
+
+
+ 
+
+
+        /* Customize scrollbar/*
+            
+                /* width */
+                ::-webkit-scrollbar {
+                width: 8px;
+                }
+
+                /* Track */
+                ::-webkit-scrollbar-track {
+                background: white;
+                }
+                
+                /* Handle */
+                ::-webkit-scrollbar-thumb {
+                background: rgba(249, 127, 28, 1);
+                }
+
+                /* Handle on hover */
+                ::-webkit-scrollbar-thumb:hover {
+                background: white;
+                }
+
+                
+
+          
+
+        </style>
+        </head>
+
+
+    <!--HTML-->
+
+    <body onload="startTime()">
+        <div>
+        <div id="home">
+            <div id="bg">
+                <div id="space">
+    
+                <!--Navigation-->
+                <nav>
+                <div id="container">
+                    <div class="topnav">
+                      <a href="#bahay">HOME</a>
+                      <a onclick="myFunction()" class="dropbtn">EVENT </a>
+                        <div id="myDropdown" class="dropdown-content"> 
+                            <a href="Upcoming-Event Page.html">Upcoming Event</a>
+                            <a href="Previous-Event Page.html">Previous Event</a>
+                            <a href="Past-Event Page.html">Past Event</a>
+                        </div>
+                      <a href="#about">ABOUT</a>
+                      <a href="#footer">CONTACT</a>
+
+                        
+                      <div class="search-container">
+                        <button class="btn-search">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <input type="text" class="input-search" placeholder="Search...">
+                      </div>
+                      
+                    </div>
+                </div>
+                </nav>
+
+                <script>
+                    /* When the user clicks on the button, 
+                    toggle between hiding and showing the dropdown content */
+                    function myFunction() {
+                      document.getElementById("myDropdown").classList.toggle("show");
+                    }
+                    
+                    // Close the dropdown if the user clicks outside of it
+                    window.onclick = function(event) {
+                      if (!event.target.matches('.dropbtn')) {
+                        var dropdowns = document.getElementsByClassName("dropdown-content");
+                        var i;
+                        for (i = 0; i < dropdowns.length; i++) {
+                          var openDropdown = dropdowns[i];
+                          if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                          }
+                        }
+                      }
+                    }
+                    </script>
+
+                    <!--Clock-->
+
+                    <div class="clock-container">
+                    <div class="clock-time" id="txt">
+                    </div>
+
+                    <script>
+                    function startTime() {
+                      const today = new Date();
+                      let h = today.getHours();
+                      let m = today.getMinutes();
+                      let s = today.getSeconds();
+                      m = checkTime(m);
+                      s = checkTime(s);
+                      document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+                      setTimeout(startTime, 1000);
+                    }
+                    
+                    function checkTime(i) {
+                      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+                      return i;
+                    }
+                    </script>
+                    </div>
+
+                    <!--Title-->
+                <div id="imgbg">    
+                    <div id="title">
+                        <div class="cets-container">
+                            <span id="cet">CET</span>
+                            <span id="vent">Vent</span>
+                            <p id="college">COLLEGE OF ENGINEERING</p>
+                            <p id="join"> Transforming Visions into Reality: Join the College of Engineering for Inspiring Events.</p>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="body"> 
+
+                    <!--Cards-->
+
+                    <div class="card-container">
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                    </div>
+                    
+
+                      <div class="whatisthis-container" id="bahay">
+                        <div id="computer"></div>
+                        <div class="whatisthis-header"> WHAT IS THIS? </div>
+                        <div id="whatisthis"> An event website for a College of Engineering is an essential resource designed to connect students, faculty, alumni, and industry professionals with a 
+                          wide range of activities and opportunities within the engineering community. This platform typically features an organized event calendar that lists upcoming workshops, 
+                          guest lectures, career fairs, and conferences, making it easy for users to find relevant information. </div>
+                      </div>
+
+
+                      <div class="carousell-container">
+                        <div class="carousell-header"> Empowering Innovation: </div>   
+                        <div class="carousell-sideheader">Upcoming Events at the College of Engineering</div>                 
+                        <div class="slideshow-container">
+                          <div class="mySlides fade">
+                            <div class="numbertext">1 / 6</div>
+                            <img src="SportFest1.jpg" style="width:100%">
+                            <div class="text">Caption Text</div>
+                          </div>
+                          
+                          <div class="mySlides fade">
+                            <div class="numbertext">2 / 6</div>
+                            <img src="SportFest2.jpg" style="width:100%">
+                            <div class="text">Caption Two</div>
+                          </div>
+                          
+                          <div class="mySlides fade">
+                            <div class="numbertext">3 / 6</div>
+                            <img src="SportFest3.jpg" style="width:100%">
+                            <div class="text">Caption Three</div>
+                          </div>
+
+                          <div class="mySlides fade">
+                            <div class="numbertext">4 / 6</div>
+                            <img src="SportFest4.jpg" style="width:100%">
+                            <div class="text">Caption Four</div>
+                          </div>
+
+                          <div class="mySlides fade">
+                            <div class="numbertext">5 / 6</div>
+                            <img src="SportFest5.jpg" style="width:100%">
+                            <div class="text">Caption Five</div>
+                          </div>
+
+                          <div class="mySlides fade">
+                            <div class="numbertext">6 / 6</div>
+                            <img src="SportFest6.jpg" style="width:100%">
+                            <div class="text">Caption Six</div>
+                          </div>
+                          
+                          </div>
+                          <br>
+          
+                          <a class="prev" onclick="plusSlides(-1)">❮</a>
+                          <a class="next" onclick="plusSlides(1)">❯</a>
+
+                          
+                                    <script>
+                                    let slideIndex = 1;
+                                      showSlides(slideIndex);
+
+                                      function plusSlides(n) {
+                                        showSlides(slideIndex += n);
+                                      }
+
+                                      function currentSlide(n) {
+                                        showSlides(slideIndex = n);
+                                      }
+
+                                      function showSlides(n) {
+                                        let i;
+                                        let slides = document.getElementsByClassName("mySlides");
+                                        let dots = document.getElementsByClassName("dot");
+                                        if (n > slides.length) {slideIndex = 1}    
+                                        if (n < 1) {slideIndex = slides.length}
+                                        for (i = 0; i < slides.length; i++) {
+                                          slides[i].style.display = "none";  
+                                        }
+                                        for (i = 0; i < dots.length; i++) {
+                                          dots[i].className = dots[i].className.replace(" active", "");
+                                        }
+                                        slides[slideIndex-1].style.display = "block";  
+                                        dots[slideIndex-1].className += " active";
+          }
+                                    </script>
+
+                        </div>
+                          
+                          <div class="carousell2-container">
+                            <div class="slidetext-container">
+                              <div class="slide-header"> Iconic </div>
+                              <div class="slide-sideheader"> Moments of CET </div>
+                              <div class="slide-text"> A day where students present groundbreaking projects, culminating in an award for the most innovative idea. A team unveils a prototype of a 
+                                sustainable energy device that captures audience attention, leading to a partnership with a local startup. Engineering students team up with peers from other disciplines
+                                 (like arts and sciences) to tackle complex problems, resulting in unexpected and innovative solutions, such as a wearable health monitor designed by engineering and
+                                  design students together. </div>
+                            </div>
+
+                            <div class="randomslide"> One simple yet impactful event that could be held at the College of Engineering is a Lunch and Learn session, where students and faculty come
+                               together to share a meal while exploring a specific engineering topic. This event fosters an informal environment conducive to learning and discussion, allowing 
+                               participants to delve into recent industry trends, innovative research, or even exciting student projects. By inviting guest speakers, such as industry professionals 
+                               or alumni, the sessions can provide valuable insights into real-world applications of engineering principles, bridging the gap between academic theory and practical 
+                               experience.
+                            </div>
+
+                        
+                            <div class="sliderandom-container">
+                            
+                            <div class="slide1">
+                              <img src="CET1.1.jpg" alt="Avatar" class="slide1-image">
+                              <div class="slide1-overlay">
+                                <div class="slide1-text">The College of Engineering and Technology strode strong at the UDM Sportsfest 2024 parade and opening 
+                                  ceremony, together with the CET representatives, students, esteemed faculties, and staffs; showcasing their innovative spirit
+                                   and team pride! </div>
+                              </div>
+                            </div>
+
+                            <div class="slide2">
+                              <img src="CET2.1.jpg" alt="Avatar" class="slide2-image">
+                              <div class="slide2-overlay">
+                                <div class="slide2-text">The College of Engineering and Technology strode strong at the UDM Sportsfest 2024 parade and opening 
+                                  ceremony, together with the CET representatives, students, esteemed faculties, and staffs; showcasing their innovative spirit
+                                   and team pride!</div>
+                              </div>
+                            </div>
+
+                            <div class="slide3">
+                              <img src="CET3.1.jpg" alt="Avatar" class="slide3-image">
+                              <div class="slide3-overlay">
+                                <div class="slide3-text">The College of Engineering and Technology strode strong at the UDM Sportsfest 2024 parade and opening 
+                                  ceremony, together with the CET representatives, students, esteemed faculties, and staffs; showcasing their innovative spirit
+                                   and team pride!</div>
+                              </div>
+                            </div>
+
+                            <div class="slide4">
+                              <img src="CET4.1.jpg" alt="Avatar" class="slide4-image">
+                              <div class="slide4-overlay">
+                                <div class="slide4-text">The College of Engineering and Technology strode strong at the UDM Sportsfest 2024 parade and opening 
+                                  ceremony, together with the CET representatives, students, esteemed faculties, and staffs; showcasing their innovative spirit
+                                   and team pride!</div>
+                              </div>
+                            </div>
+
+                          </div>
+
+                          <div class="learnmore2-container">
+                            <a href="https://udmwebsite.udm.edu.ph/college-of-engineering-and-technology/" target="_blank"> Learn More </a></div>
+
+                          </div>
+
+                          <div class="circle-header">
+                            <div id="header"> "Engineering is the art of directing the great sources of power in nature for the use and convenience of man." </div>
+                            <div id="body">  — Thomas Tredgold </div>
+                            
+                          </div>
+
+                          
+
+                          <div class="boxofcircle-container">
+                          
+                            <img src="midphoto1.jpg" alt="Avatar" class="circle1-container">
+                            <img src="midphoto2.jpg" alt="Avatar" class="circle2-container">
+                            <img src="midphoto3.jpg" alt="Avatar" class="circle4-container">
+
+                          
+                            <div class="circle2-text-container">
+                              <div id="circle2-text"> Get ready to immerse yourself in a world of creativity and technology at the Annual Engineering Innovation Expo! This event is your chance to 
+                                connect with visionary thinkers, explore groundbreaking projects, and gain hands-on experience in workshops led by industry experts. Join us for an inspiring day filled 
+                                with engaging keynote speakers, interactive displays, and thought-provoking panel discussions. Whether you’re a student eager to showcase your work, a professional 
+                                looking to network, or simply curious about the latest trends in engineering, there’s something for everyone. Explore innovative solutions to real-world challenges, 
+                                learn about emerging technologies, and discover how you can play a role in shaping the future. Don’t miss this opportunity to expand your knowledge, build valuable 
+                                connections, and ignite your passion for engineering.</div>
+                            </div>
+
+                            <div class="midheader-container">
+                              <div id="midheader"> Why Attend The CET Event?</div>
+                            </div>
+
+                            <div class="circle3-text-container">
+                              <div id="circle3-text"> This event brings together students, faculty, and industry professionals, offering a unique platform to connect with like-minded individuals. 
+                                Building relationships with peers and mentors can open doors for internships, collaborations, and future job opportunities.</div>
+                            </div>
+
+                            <div class="register-container">
+                              <a href="https://udmwebsite.udm.edu.ph/college-of-engineering-and-technology/" target="_blank"> REGISTER</a>
+                            </div>
+                      
+                          </div>
+        
+                             
+                        
+
+                          
+
+                      </div>
+
+
+                      
+
+                      <!--CET Container-->
+
+                      
+                    <div class="mid-bigbox">
+
+                      <div class="randombox"></div>
+                          <div class="randombox2" id="about" > ABOUT </div>
+                        
+                    <div id="midbox-container">
+                        <div class="midbox-text1">
+                        The College of Engineering and Technology was one of the departments initially established in 1995 There were various courses 
+                        offered such as; BS in Civil Engineering, BS in Electrical Engineering, BS in Electronics Engineering, BS in Industrial Engineering,
+                         BS in Computer Engineering, and BS in Computer Science. Presently, the CET offers BS in Electronics Engineering and BS in Computer 
+                         Engineering, the only programs retained since the college’s establishment. The BS in Information Technology also presently offered 
+                         by the University replaced BS in Computer Science Years later, other fields of specialization such as Data Science and Cybersecurity 
+                         were added to BSIT.
+                         </div>
+                         <div class="midbox-text2">
+                        The College of Engineering and Technology (CET) is committed to the growth of the Manileño’s by developing Information Technology and 
+                        Engineering professionals, entrepreneurs, managers, and new technologies. We offer programs that are sought after hence our graduates are employable. 
+                        The College of Engineering and Technology’s strong alliance to industry ensures relevancy in classrooms and research that support our mission of 
+                        building solutions for a strong economy and a sustainable environment. The College of Engineering and Technology is represented by the 
+                        color Orange stimulating the intensity in systems development, rising infrastructures, and digitization that its students and faculty 
+                        are known for. As a mood-lifting color, it also creates an image of optimistic innovation.
+                         </div>
+
+                         <div class="learnmore3-container">
+                          <a href="https://udmwebsite.udm.edu.ph/college-of-engineering-and-technology/" target="_blank"> Learn More </a></div>
+
+                    </div>
+
+                    <div class="slides-container">
+                          <div class="mySlides1">
+                            <img src="CET8.jpg" style="width:100%" class="w3-hover-opacity"></div>
+                          <div class="mySlides1">
+                            <img src="CET2.jpg" style="width:100%" class="w3-hover-opacity"></div>
+                          <div class="mySlides1">
+                            <img src="CET3.jpg" style="width:100%" class="w3-hover-opacity"></div>
+                          <div class="mySlides1">
+                            <img src="CET4.jpg" style="width:100%" class="w3-hover-opacity"></div>
+                        <div class="mySlides1">
+                            <img src="CET5.jpg" style="width:100%" class="w3-hover-opacity"></div>
+                          <div class="mySlides1">
+                            <img src="CET6.jpg" style="width:100%" class="w3-hover-opacity"></div>
+                          <div class="mySlides1">
+                            <img src="CET7.jpg" style="width:100%" class="w3-hover-opacity"></div>
+                          <div class="mySlides1">
+                            <img src="CET1.jpg" style="width:100%" class="w3-hover-opacity"></div>
+                          <div class="mySlides1">
+                            <img src="CET9.jpg" style="width:100%" class="w3-hover-opacity"></div>
+                          <div class="mySlides1">
+                            <img src="CET10.jpg" style="width:100%" class="w3-hover-opacity"></div>
+                            
+                        
+                          <div class="row-container">
+                          <div class="row">
+                          <div class="column">
+                            <img class="demo cursor" src="CET8.1.jpg" style="width:50%" onclick="currentSlide1(8)" alt="The Woods" class="w3-hover-opacity">
+                          </div>
+                          <div class="column">
+                            <img class="demo cursor" src="CET2.1.jpg" style="width:50%" onclick="currentSlide1(2)" alt="Cinque Terre" class="w3-hover-opacity">
+                          </div>
+                          <div class="column">
+                            <img class="demo cursor" src="CET3.1.jpg" style="width:50%" onclick="currentSlide1(3)" alt="Mountains and fjords" class="w3-hover-opacity">
+                          </div>
+                          <div class="column">
+                            <img class="demo cursor" src="CET4.1.jpg" style="width:50%" onclick="currentSlide1(4)" alt="Mountains and fjords" class="w3-hover-opacity">
+                          </div>
+                          <div class="column">
+                            <img class="demo cursor" src="CET5.1.jpg" style="width:50%" onclick="currentSlide1(5)" alt="The Woods" class="w3-hover-opacity">
+                          </div>
+                          <div class="column">
+                            <img class="demo cursor" src="CET6.1.jpg" style="width:50%" onclick="currentSlide1(6)" alt="Cinque Terre" class="w3-hover-opacity">
+                          </div>
+                          <div class="column">
+                            <img class="demo cursor" src="CET7.1.jpg" style="width:50%" onclick="currentSlide1(7)" alt="Mountains and fjords" class="w3-hover-opacity">
+                          </div>
+                          <div class="column">
+                            <img class="demo cursor" src="CET1.1.jpg" style="width:50%" onclick="currentSlide1(1)" alt="Mountains and fjords" class="w3-hover-opacity">
+                            </div>
+                          <div class="column">
+                            <img class="demo cursor" src="CET9.1.jpg" style="width:50%" onclick="currentSlide1(9)" alt="Mountains and fjords" class="w3-hover-opacity">
+                          </div>
+                          <div class="column">
+                            <img class="demo cursor" src="CET10.1.jpg" style="width:50%" onclick="currentSlide1(10)" alt="Mountains and fjords" class="w3-hover-opacity">
+                          </div>
+                            
+                          </div>
+                          </div>
+
+                          <script>
+                            let slideIndex1 = 1;
+                            showSlides1(slideIndex1);
+                            
+                            function plusSlides1  (n) {
+                              console.log("Element:", element);
+                              showSlides1(slideIndex1 += n);
+                            }
+                            
+                            function currentSlide1(n) {
+                              showSlides1(slideIndex1 = n);
+                            }
+                            
+                            function showSlides1(n) {
+                              let i;
+                              let slides = document.getElementsByClassName("mySlides1");
+                              let dots = document.getElementsByClassName("demo");
+                              let captionText = document.getElementById("caption");
+                              if (n > slides.length) {slideIndex1 = 1}
+                              if (n < 1) {slideIndex1 = slides.length}
+                              for (i = 0; i < slides.length; i++) {
+                                slides[i].style.display = "none";
+                              }
+                              for (i = 0; i < dots.length; i++) {
+                                dots[i].className = dots[i].className.replace(" active", "");
+                              }
+                              slides[slideIndex1-1].style.display = "block";
+                              dots[slideIndex1-1].className += " active";
+                              captionText.innerHTML = dots[slideIndex1-1].alt;
+                            }
+      
+                              if (element) { // Check if the element exists
+                                  element.innerHTML = n;
+                              } else {
+                                  console.error("Element is null!");
+                              }
+                            </script>
+                          </div>
+
+                          <div class="bigphoto-container"></div>
+                          <div class="photobox-container"></div>
+
+
+                          <div class="flip-container">
+
+                            <div class="back-map">
+                              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.131687977136!2d120.97899557550704!3d14.59157107729693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397ca18d1ebbc55%3A0xd017325c95111277!2sUniversidad%20De%20Manila!5e0!3m2!1sen!2sph!4v1729769587442!5m2!1sen!2sph" 
+                                width="1200" 
+                                height="700" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                            </div>
+
+                            <div class="front-map">
+                              <img src="FlipPhoto.jpg" 
+                              width="1200" 
+                              height="700" 
+                              style="border:0;" 
+                              allowfullscreen="" 
+                              referrerpolicy="no-referrer-when-downgrade">
+                            </div>
+                          </div>
+
+                          <div class="cards-container" id="footer">
+                            <div class="map-header"> 
+                              <div id="map-text"> Where can you find us? </div>
+                              <div class="media-container"> "Universidad de Manila is a public university in Ermita, Manila, that offers excellent quality 
+                                education from undergraduate to graduate studies, primarily for the City of Manila residents. Aside from giving experience 
+                                and quality education to their students, the institution’s primary goal is to guide them to succeed in the paths they want 
+                                to pursue. Universidad de Manila is committed to provide equal opportunities by developing the learners’ knowledge, skills, 
+                                and values, through quality education and dynamic technology-driven systems, in a diverse yet inclusive environment for 
+                                learning, research, and community engagement." </div>
+                            </div>
+                          </div>
+
+                            
+                          
+
+
+
+                        </div>
+                        
+
+                
+                      
+                      
+                  
+                    
+
+                     <!--FOOTER-->
+
+                     <div class="footer">
+                        <div class="contact"> CONTACT</div>
+                        <div class="questions-container"> QUESTIONS? </div>
+                        <div class="details-container"> 
+                            <div id="detail1"> Call Kharyll at 1234-567-8999 or send us an</div>
+                            <div id="detail2"> Email to: iloveyou123@gmail.com</div>
+                            <div id="detail3"> Address: 788 O. Santiago St. </div>
+                            <div id="detail4"> Sampaloc Manila, Philippines 1008</div>   
+                        </div>
+
+                              <div class="ag-format-container">
+                                <div class="ag-courses_box">
+                                  <div class="ag-courses_item">
+                                    <a href="#" class="ag-courses-item_link">
+                                      <div class="ag-courses-item_bg"></div>
+                                      <div class="ag-courses-item_title">
+                                        Get In Touch
+                                      </div>
+
+                                      <div class="ag-courses-item_date-box">
+                                        CETVent Contact Page
+                                      </div>
+                                    </a>
+                                  </div>     
+
+                                  <div class="ag-courses_item">
+                                    <a href="#" class="ag-courses-item_link">
+                                      <div class="ag-courses-item_bg"></div>
+                              
+                                      <div class="ag-courses-item_title">
+                                        Credentials
+                                      </div>
+
+                                      <div class="ag-courses-item_date-box">
+                                        Facebook:
+                                        <span class="ag-courses-item_date">
+                                          UDM Stolen Shots 
+                                        </span>
+                                      </div>
+                                    </a>
+                                  </div>
+
+                                  <div class="ag-courses_item">
+                                    <a href="#" class="ag-courses-item_link">
+                                      <div class="ag-courses-item_bg"></div>
+                              
+                                      <div class="ag-courses-item_title"> Events
+                                      </div>
+
+                                      <div class="ag-courses-item_date-box">
+                                        CETVent Landing Page
+                                      </div>
+
+                                      
+                                    </a>
+                                  </div>
+
+                                  <div class="ag-courses_item">
+                                    <a href="#" class="ag-courses-item_link">
+                                      <div class="ag-courses-item_bg"></div>
+                              
+                                      <div class="ag-courses-item_title">
+                                        Portal
+                                      </div>
+
+                                      <div class="ag-courses-item_date-box">
+                                        Universidad De Manila Portal
+                                      </div>
+                                    </a>
+                                  </div>
+
+                                  <div class="ag-courses_item">
+                                    <a href="#" class="ag-courses-item_link">
+                                      <div class="ag-courses-item_bg"></div>
+                              
+                                      <div class="ag-courses-item_title">
+                                        404
+                                      </div>
+
+                                      <div class="ag-courses-item_date-box">
+                                        404 Page
+                                      </div>
+                                    </a>
+                                  </div>
+                                </div> 
+                              </div>
+
+
+                              <div class="in-container">
+                                
+                                <div class="forms">
+                                  <div class="login-title"> SIGN IN</div>
+                                  <form class="login-form">
+                                    <input type="login-text"
+                                    placeholder="Username"/>
+                                    <input type="password"
+                                    placeholder="Password"/>
+                                    <button>Login</button>
+                                  </form>
+                                </div>
+
+                                <div class="form2">
+                                  <div class="signup-title"> SIGN UP</div>
+                                  <form class="signup-form">
+                                    <input type="signup-text"
+                                    placeholder=" Create Username"/>
+                                    <input type="signup-password"
+                                    placeholder="Create Password"/>
+                                    <input type="signup-text"
+                                    placeholder=" Year & Section"/>
+                                    <input type="signup-password"
+                                    placeholder="Email"/>
+                                    <button>Confirm</button>
+                                  </form>
+
+                                  
+                                </div>
+                            </div>
+    </div>
+    </div>
+    </body>
+    </html>
